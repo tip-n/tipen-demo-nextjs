@@ -1,17 +1,15 @@
 "use client";
 import { useState } from "react";
+import Link from "next/link";
 
-import { HamburgerButton } from "@ui/button/HamburgerButton";
-import { AnimateWrapper } from "@ui/animation/AnimateWrapper";
-import { HStack } from "@ui/stack/HStack";
-import { Box } from "@ui/box";
+import { Box, IconButton, Stack } from "@mui/material";
 
-import { NavbarItemContainer } from "@shared/navbar/mobile/NavbarItemContainer";
-import { ThemeButton } from "@shared/actions/theme/Button";
-import { LanguageButton } from "@shared/actions/language/Button";
-import { SettingButton } from "@shared/actions/setting/Button";
+import MenuRoundedIcon from '@mui/icons-material/MenuRounded';
+import LocalFireDepartmentRoundedIcon from '@mui/icons-material/LocalFireDepartmentRounded';
 
-import { combineClass } from "@lib/class";
+import { bangers } from "@app/ght-fried-chicken/fonts";
+
+import { MobileNavModal } from "@shared/ght-fried-chicken/navbar/mobile/NavbarModal";
 
 export const MobileNav = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,21 +20,42 @@ export const MobileNav = () => {
 
   return (
     <>
-      <HStack className={combineClass("w-full", "py-2", "px-4")}>
-        <Box className={"mr-auto"}>
-          <HamburgerButton isOpen={isOpen} onClick={hamburgerOnClick(isOpen)} />
+      <Stack direction={"row"} spacing={1} py={2} width={"100%"}>
+        <Box my={"auto !important"}>
+          <Link href={"/ght-fried-chicken"}>
+            <Stack direction={"row"} mr={"auto !important"} spacing={0.5} style={{
+              pointerEvents: "none",
+              userSelect: "none",
+            }}>
+              <LocalFireDepartmentRoundedIcon sx={{
+                my: "auto",
+                fontSize: "40px"
+              }}/>
+              <Stack justifyContent={"center"} width={"100%"} spacing={0}>
+                <Box fontSize={18} fontWeight={500} className={bangers.className}>
+                  Gak habis thinking
+                </Box>
+                <Box
+                  fontSize={16}
+                  textAlign={"start"}
+                  fontWeight={600}
+                >
+                  FRIED CHICKEN
+                </Box>
+              </Stack>
+            </Stack>
+          </Link>
         </Box>
-        <HStack className={combineClass("ml-auto", "my-auto", "space-x-3")}>
-          <SettingButton />
-          <ThemeButton />
-          <LanguageButton />
-        </HStack>
-      </HStack>
-      {isOpen && (
-        <AnimateWrapper>
-          <NavbarItemContainer onClose={hamburgerClose} />
-        </AnimateWrapper>
-      )}
+        <Box marginLeft={"auto !important"}>
+          <IconButton onClick={hamburgerOnClick(isOpen)} disableRipple>
+            <MenuRoundedIcon style={{
+              color: "white",
+              fontSize: "32px"
+            }}/>
+          </IconButton>
+        </Box>
+      </Stack>
+      <MobileNavModal isOpen={isOpen} onClose={hamburgerClose}/>
     </>
   );
 };

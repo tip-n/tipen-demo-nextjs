@@ -1,4 +1,5 @@
 "use client";
+import { Box } from "@mui/material";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -17,9 +18,26 @@ export const DesktopNavItem = ({
 
   return (
     <Link
+      style={{
+        fontSize: 18,
+        fontWeight: 600,
+      }}
       href={path}
     >
-      {name}
+      <Box
+        color={
+          isCurrentPath ?
+          "navbarSelected.contrastText" :
+          "navbarUnselected.contrastText"
+        }
+        sx={{
+          '&:hover': {
+            color: "white"
+          }
+        }}
+      >
+        {name}
+      </Box>
     </Link>
   );
 };

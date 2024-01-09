@@ -5,10 +5,14 @@ declare module '@mui/material/styles' {
         ghtFriedChickenRed?: PaletteOptions['primary'];
         ghtFriedChickenGray?: PaletteOptions['primary'];
         ghtFriedChickenYellow?: PaletteOptions['primary'];
+        navbarSelected?: PaletteOptions['primary'];
+        navbarUnselected?: PaletteOptions['primary'];
     }
     interface Palette {
       ghtFriedChickenRed?: Palette['primary'];
       ghtFriedChickenGray?: Palette['primary'];
       ghtFriedChickenYellow?: Palette['primary'];
+      navbarSelected?: Palette['primary'];
+      navbarUnselected?: Palette['primary']
     }
 }

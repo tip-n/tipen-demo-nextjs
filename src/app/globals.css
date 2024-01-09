@@ -105,3 +105,16 @@ a {
     color-scheme: dark;
   }
 }
+
+:root {
+  --swiper-navigation-color: #121212;
+  --swiper-pagination-color: #121212;
+}
+
+/* .swiper-wrapper{
+  padding-bottom: 20px;
+}
+
+.swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction{
+  bottom: 0px !important;
+} */

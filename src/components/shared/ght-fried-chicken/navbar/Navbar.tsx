@@ -1,25 +1,30 @@
 "use client";
 import React from "react";
 
-import { AppBar, Box, Container, Toolbar } from "@mui/material";
+import { AppBar, Fade, Toolbar } from "@mui/material";
 
 import { DesktopNav } from "@shared/ght-fried-chicken/navbar/desktop/Navbar";
+import { MobileNav } from "@shared/ght-fried-chicken/navbar/mobile/Navbar";
+
+import { useIsMobileView } from "@hooks/device";
 
 export const navbarHeight = "60px";
 
 export const Navbar = () => {
-  // const isMobile = UseIsMobileView();
+  const isMobile = useIsMobileView();
 
   return (
     <>
-      {/* <FadeIn> */}
-        <AppBar position="fixed" color="error">
+      <Fade in>
+        <AppBar
+          position="fixed"
+          color="error"
+        >
           <Toolbar>
-            <DesktopNav/>
-            {/* {isMobile ? <MobileNav /> : <DesktopNav />} */}
+            {isMobile ? <MobileNav/> : <DesktopNav/>}
           </Toolbar>
         </AppBar>
-      {/* </FadeIn> */}
+      </Fade>
     </>
   );
 };

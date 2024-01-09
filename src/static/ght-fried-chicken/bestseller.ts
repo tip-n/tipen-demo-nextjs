@@ -1,32 +1,46 @@
+const src = "/ght-fried-chicken"
+
 export const bestSeller = [
     {
         "name": "Paket Nongski",
-        "src": "/ght-fried-chicken/fried-chicken-french-fries-white-plate.jpg",
-        "attribution": "Image by lifeforstock on Freepik",
-    },
-    {
-        "name": "Ayam A La Carte",
-        "src": "/ght-fried-chicken/white-appetizer-lunch-meal-baked.jpg",
+        "src": `${src}/french-fries-fried-chicken-wooden-plate.jpg`,
         "attribution": "Image by mrsiraphol on Freepik",
+        "attributionurl": "https://www.freepik.com/free-photo/french-fries-fried-chicken-wooden-plate_1123626.htm#page=3&query=fried%20chicken&position=4&from_view=search&track=ais&uuid=50cabe9c-b896-4afa-a583-2bc31cae7f8d",
+        "price": 23000,
     },
     {
-        "name": "Cheezy Chicks",
-        "src": "/ght-fried-chicken/9377640.png",
-        "attribution": "Image by Freepik",
+        "name": "Paha Atas",
+        "src": `${src}/fries-chicken-isolated-1.jpg`,
+        "attribution": "Image by lifeforstock on Freepik",
+        "attributionurl": "https://www.freepik.com/free-photo/fries-chicken-isolated_3816168.htm#query=fried%20chicken&position=12&from_view=search&track=ais&uuid=c2df0549-4d4c-4577-9bb3-92681dd29e60",
+        "price": 13000
     },
     {
-        "name": "Burgerz",
-        "src": "/ght-fried-chicken/vecteezy_beef-burger-isolated-illustration-ai-generative_23901897.jpg",
+        "name": "Paha Bawah",
+        "src": `${src}/640-fried-chicken-on-white-background.jpg`,
         "attribution": "Free Stock photos by Vecteezy",
+        "attributionurl": "https://www.vecteezy.com/free-photos",
+        "price": 12000,
+    },
+    {
+        "name": "Sayap",
+        "src": `${src}/fries-chicken-isolated-2.jpg`,
+        "attribution": "Image by mrsiraphol on Freepik",
+        "attributionurl": "https://www.freepik.com/free-photo/fries-chicken-isolated_1032793.htm#query=fried%20chicken&position=19&from_view=search&track=ais&uuid=50cabe9c-b896-4afa-a583-2bc31cae7f8d",
+        "price": 10000
+    },
+    {
+        "name": "BheeseCurger",
+        "src": `${src}/640-beef-burger-isolated-illustration-ai-generative.jpg`,
+        "attribution": "Free Stock photos by Vecteezy",
+        "attributionurl": "https://www.vecteezy.com/free-photos",
+        "price": 10000,
     },
     {
         "name": "Sate Bakar",
-        "src": "/ght-fried-chicken/grill-chicken.jpg",
-        "attribution": "Image by topntp26 on Freepik",
-    },
-    {
-        "name": "Sambal Korek",
-        "src": "/ght-fried-chicken/vecteezy_stock-photo-of-sambal-food-photography-isolated-white_29344752.jpg",
+        "src": `${src}/640-yakitori-is-a-typical-satay-from-japan-which-generally-uses-chicken-ai-generated.jpg`,
         "attribution": "Free Stock photos by Vecteezy",
+        "attributionurl": "https://www.vecteezy.com/free-photos",
+        "price": 8000,
     },
 ]
